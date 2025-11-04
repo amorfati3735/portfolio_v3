@@ -23,7 +23,7 @@ const Journal: React.FC = () => {
     const [isFormVisible, setIsFormVisible] = useState(false);
     const [newTitle, setNewTitle] = useState('');
     const [newContent, setNewContent] = useState('');
-    
+
     useEffect(() => {
         try {
             const storedEntries = localStorage.getItem('journalEntries');
@@ -99,41 +99,41 @@ const Journal: React.FC = () => {
             </motion.h1>
 
             <div className="text-center mb-16">
-                 <Button onClick={() => setIsFormVisible(!isFormVisible)} variant="primary">
+                <Button onClick={() => setIsFormVisible(!isFormVisible)} variant="primary">
                     {isFormVisible ? 'Cancel' : 'New Entry'}
                 </Button>
             </div>
-            
+
             <AnimatePresence>
-            {isFormVisible && (
-                <motion.form 
-                    onSubmit={handleAddEntry} 
-                    className="max-w-3xl mx-auto mb-20 overflow-hidden" 
-                    initial={{ opacity: 0, height: 0 }} 
-                    animate={{ opacity: 1, height: 'auto', transition: { duration: 0.5, ease: 'easeOut' } }} 
-                    exit={{ opacity: 0, height: 0, transition: { duration: 0.3, ease: 'easeIn' } }}
-                >
-                     <input
-                        type="text"
-                        value={newTitle}
-                        onChange={(e) => setNewTitle(e.target.value)}
-                        placeholder="Title of your raving"
-                        className="w-full bg-card border border-border rounded-md p-3 mb-4 text-2xl font-serif text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                        required
-                    />
-                     <textarea
-                        value={newContent}
-                        onChange={(e) => setNewContent(e.target.value)}
-                        placeholder="Spill your thoughts..."
-                        rows={8}
-                        className="w-full bg-card border border-border rounded-md p-3 font-sans text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                        required
-                    />
-                    <div className="text-right mt-4">
-                        <Button type="submit">Publish</Button>
-                    </div>
-                </motion.form>
-            )}
+                {isFormVisible && (
+                    <motion.form
+                        onSubmit={handleAddEntry}
+                        className="max-w-3xl mx-auto mb-20 overflow-hidden"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto', transition: { duration: 0.5, ease: 'easeOut' } }}
+                        exit={{ opacity: 0, height: 0, transition: { duration: 0.3, ease: 'easeIn' } }}
+                    >
+                        <input
+                            type="text"
+                            value={newTitle}
+                            onChange={(e) => setNewTitle(e.target.value)}
+                            placeholder="Title of your raving"
+                            className="w-full bg-card border border-border rounded-md p-3 mb-4 text-2xl font-serif text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                            required
+                        />
+                        <textarea
+                            value={newContent}
+                            onChange={(e) => setNewContent(e.target.value)}
+                            placeholder="Spill your thoughts..."
+                            rows={8}
+                            className="w-full bg-card border border-border rounded-md p-3 font-sans text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                            required
+                        />
+                        <div className="text-right mt-4">
+                            <Button type="submit">Publish</Button>
+                        </div>
+                    </motion.form>
+                )}
             </AnimatePresence>
 
             <div className="max-w-3xl mx-auto space-y-20">
