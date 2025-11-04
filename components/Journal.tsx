@@ -6,14 +6,14 @@ import { Button } from './ui/Button';
 const initialEntries: JournalEntryType[] = [
     {
         id: '1',
-        title: 'First Musings',
-        content: 'The void stares back, and it is comforting. In the quiet hum of the machine, a universe of thought unfolds. The gothic arch of a well-written function, the stained-glass window of a compiled program...',
+        title: 'First One',
+        content: 'Filler text',
         date: new Date().toISOString(),
     },
     {
         id: '2',
         title: 'On Aesthetics',
-        content: 'Minimalism is not the absence of something, but the perfect amount of it. Every pixel, every line of code, must serve a purpose. It is a philosophy of reduction, of finding elegance in simplicity.',
+        content: 'Filler text',
         date: new Date(Date.now() - 86400000).toISOString(), // yesterday
     },
 ];
