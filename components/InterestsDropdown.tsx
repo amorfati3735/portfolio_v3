@@ -26,7 +26,7 @@ const InterestsDropdown: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const stuffInto = ["osint", "ricing", "lotm", "ps2 emulation", "silent hill"];
+  const stuffInto = ["pcsx2", "linux ricing", "lotm", "nier automata", "silent hill"];
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -60,7 +60,7 @@ const InterestsDropdown: React.FC = () => {
           >
             <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
               {stuffInto.map(item => (
-                  <a key={item} href="#" className="block px-4 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground font-spectral" role="menuitem">{item}</a>
+                <a key={item} href="#" className="block px-4 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground font-spectral" role="menuitem">{item}</a>
               ))}
             </div>
           </motion.div>

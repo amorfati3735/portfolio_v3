@@ -10,8 +10,8 @@ const projects: Project[] = [
   {
     icon: ScanText,
     title: 'Manga Image Translator',
-    description: 'A tool that uses OCR and machine translation to translate text directly on manga images, preserving the original layout.',
-    tags: ['Python', 'OpenCV', 'Tesseract', 'DeepL API'],
+    description: 'A tool that uses OCR and llm generated translations to translate text directly on manga images, preserving the original layout.',
+    tags: ['Python', 'OpenCV', 'Tesseract', 'DeepseekAPI'],
     liveUrl: '#',
     codeUrl: '#',
   },
@@ -25,7 +25,7 @@ const projects: Project[] = [
   },
   {
     icon: Code2,
-    title: 'Portfolio Website v2',
+    title: 'Portfolio Website',
     description: 'This very portfolio. A modern gothic single-page site built with React, Tailwind CSS, and Framer Motion for a dark, aesthetic feel.',
     tags: ['React', 'Tailwind CSS', 'Framer Motion', 'TypeScript'],
     liveUrl: '#',

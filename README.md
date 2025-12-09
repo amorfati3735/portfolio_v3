@@ -1,1 +1,2 @@
-third one of these
+Portfolio website built with React, Tailwind CSS, and Framer Motion.
+A journal section is under construction.
